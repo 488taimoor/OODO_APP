@@ -1,0 +1,66 @@
+<ion-header>
+    <ion-toolbar style="--border-color:gray">
+        <ion-grid>
+          <ion-row align-items-center >
+            <ion-col size="2" no-padding>
+              <ion-buttons >
+                <ion-back-button defaultHref="/list"></ion-back-button>
+              </ion-buttons>
+            </ion-col>
+            <ion-col size="8"  no-padding>
+                <ion-title style="font-size: 20px">Description</ion-title>
+            </ion-col>
+            <ion-col size="2" no-padding></ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-toolbar>
+
+     
+      <ion-grid>
+        <ion-row >
+          <ion-col padding-start size='10' style="margin-top: -5px">
+              <ion-text  color="black">
+                  <p style="font-size: 24px">{{taskName}}</p>
+                </ion-text>
+          </ion-col>
+          <ion-col text-center size='2'>
+            <div *ngIf="priority==0">
+                <ion-icon  style="zoom: 2; margin-top: 5px; " name="star-outline" ></ion-icon>
+            </div>
+            <div *ngIf="priority==1">
+                <ion-icon  style="zoom: 2; margin-top: 5px; color: goldenrod" name="star"></ion-icon>
+            </div>               
+              
+          </ion-col>
+          <ion-col padding-start style=" margin-top:-35px; padding-top: 0px;" size='12'>
+              <p style="font-size: 14px" > {{sprint}}</p>
+          </ion-col>
+          <ion-col padding-start style=" margin-top:-20px; padding-top: 0px;" size='12'>
+              <p style="color: gray; font-size: 12px" >Estimated Time: <span style="color: black" >{{plannedHours}} Hours</span></p>
+          </ion-col>
+          <ion-col padding-start style=" margin-top:-25px; padding-top: 0px;" size='12'>
+              <p style="color: gray ; font-size: 12px" >Assigned To: <span style="color: #204DFF" >{{assignedName}} </span></p>
+          </ion-col>
+          <ion-col padding-start style=" margin-top:-25px; padding-top: 0px;" size='12'>
+              <p style="color: gray ; font-size: 12px" >DeadLine Date: <span style="color: green" >{{deadLine | date}} </span></p>
+          </ion-col>
+          <!-- <ion-col style=" margin-top:-30px; padding-top: 0px;" size="6">
+            <progress-bar [progress]="progress" [color]="'#000'">
+            </progress-bar>
+          </ion-col>
+          <ion-col size='6'></ion-col> -->
+        </ion-row>
+        
+        
+
+      </ion-grid>
+     
+      
+      
+</ion-header>
+
+<ion-content padding>
+    <!-- <h4 ion-text style="color: #204DFF">{{tName}}</h4> -->
+
+<div style="color: gray; font-size: 12px" [innerHTML]="taskDescription"> </div>
+</ion-content>

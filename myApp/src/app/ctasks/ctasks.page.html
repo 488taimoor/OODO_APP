@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-grid>
+      <ion-row align-items-center >
+        <ion-col size="2" no-padding>
+          <ion-buttons >
+            <ion-back-button defaultHref="/home"></ion-back-button>
+          </ion-buttons>
+        </ion-col>
+        <ion-col size="8"  no-padding>
+            <ion-title>{{name}}</ion-title>
+        </ion-col>
+        <ion-col size="2" no-padding></ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+    <ion-card color="light" *ngFor='let task of DonetaskData '>
+       
+        <ion-card-header style="padding-bottom: 0px">
+            <ion-card-title >{{task.name}}</ion-card-title>
+            <p style="color: black; margin-top: 2px " >{{task.display_name}}</p>
+        </ion-card-header>
+        
+        <ion-card-content >
+            
+          <ion-grid >
+            <ion-row >
+              <ion-col no-padding size='4'>
+                  <p>{{task.create_date | date: 'd/M/y' }} </p>
+              </ion-col>
+              <ion-col no-padding size='8'>
+                <p style="color:gray">Assigned To:<span style="color:black"> {{task.assigned}}</span> </p>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+           
+        </ion-card-content>
+    </ion-card>
+</ion-content>

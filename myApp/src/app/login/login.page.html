@@ -1,0 +1,72 @@
+<ion-content padding>
+    <form [formGroup]="myform">
+  <ion-grid>
+    <ion-row style="margin-top: -15px">
+      <ion-col size='2'></ion-col>
+      <ion-col>
+        <ion-item lines='none' >
+          <ion-img style="width: 150px" src="../../assets/img/Alfain_logo_iconic_blue_transparent.png"></ion-img>
+        </ion-item>
+      </ion-col>
+      <ion-col size='2'></ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col >
+        <ion-item no-padding>
+          <ion-label style="margin: 0px"   position="floating">Email</ion-label>
+          <ion-input formControlName='email' ></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row style="margin-top: -5px; " >
+      <ion-col>
+          <p style="color: red; font-size: 12px;"  *ngIf="email.invalid && email.dirty">
+              incorrect email please try again
+            </p>
+      </ion-col>
+    </ion-row>
+
+    <ion-row  style="margin-top: -20px">
+      <ion-col>
+        <ion-item no-padding >
+          <ion-label  position="floating">Password</ion-label>
+          <ion-input  formControlName='password' type='password'></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+        <ion-col>
+            <p style="color: red; font-size: 12px"  *ngIf="password.invalid && password.dirty">
+                Enter your password
+              </p>
+              <p style="color: red; font-size: 12px" >
+                  {{errormessage}}
+                </p>
+        </ion-col>
+      </ion-row>
+
+    <ion-row>
+        <ion-col text-center>
+            <ion-button style="--background: #204DFF" (click)='login()' [disabled]='myform.invalid' >Login</ion-button>
+        </ion-col>
+      </ion-row>
+
+      <!-- <ion-row>
+        <ion-col no-padding>
+          <p style="color: red; font-size: 12px" >
+            {{errormessage}}
+          </p>
+        </ion-col>
+      </ion-row> -->
+
+
+  </ion-grid>
+
+</form>
+
+
+  
+
+
+</ion-content>

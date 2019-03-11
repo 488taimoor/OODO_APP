@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "1033025446927",
+    "firebase_url": "https://odoo-61432.firebaseio.com",
+    "project_id": "odoo-61432",
+    "storage_bucket": "odoo-61432.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1033025446927:android:92bc7cab8987eb48",
+        "android_client_info": {
+          "package_name": "com.Alfain.Odoo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1033025446927-lc3ntv7detqoe5m8ggd17sfchna510hs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCRUvnv-Ao_QDlK3eEjN4xAMAyamgPkm1k"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

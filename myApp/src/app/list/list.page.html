@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      My Tasks
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card color="light"   (click)='open(task)' *ngFor='let task of taskdata '>
+
+    <ion-card-header style="padding-bottom: 0px">
+      <ion-card-title style="color: black; font-size: 16px">{{task.name}}</ion-card-title>
+      <p style="color: black; margin-top: 2px; font-size: 8px ">{{task.display_name}}</p>
+    </ion-card-header>
+
+    <ion-card-content style="padding-top: 0px">
+
+      <ion-grid>
+        <ion-row>
+          <ion-col no-padding size='4'>
+            <p style="font-size: 12px">{{task.create_date | date }} </p>
+          </ion-col>
+          <ion-col no-padding size='8'>
+            <p style="color:gray; font-size: 12px">Assigned To:
+              <span style="color:black;"> {{task.assigned}}</span>
+            </p>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+    </ion-card-content>
+  </ion-card>
+</ion-content>

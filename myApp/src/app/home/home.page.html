@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      My Projects
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+  <ion-card color="light" (click)='open(project)' *ngFor='let project of projectData '>
+       
+    <ion-card-header style="padding-bottom: 10px" >
+        <ion-card-title color='primary' style="color:#204DFF; font-size: 16px" >{{project.name}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content style="padding-top: 0px" >
+        <p style="color: gray; font-size: 12px">{{project.task}} Tasks</p>
+      <!-- <ion-grid>
+        <ion-row>
+          <ion-col>
+             
+          </ion-col>
+          <ion-col>
+             
+          </ion-col>
+        </ion-row>
+      </ion-grid> -->
+       
+    </ion-card-content>
+</ion-card>
+</ion-content>
